@@ -1,0 +1,95 @@
+# ---------------------------------------------------------------
+# Applied AI Lab — .gitignore
+# Principle: commit code, prompts, configs, small synthetic data and
+# reports. Never commit secrets, private media, customer data or weights.
+# ---------------------------------------------------------------
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials*.json
+service-account*.json
+secrets/
+.secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.python-version.local
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+.ipynb_checkpoints/
+
+# Node (Remotion, n8n custom nodes, MCP servers in TypeScript)
+node_modules/
+.next/
+out/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Model weights and large binaries (store on Hugging Face Hub / cloud storage)
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.gguf
+*.onnx
+models/
+checkpoints/
+loras/
+
+# Generated media (keep only small, approved reference images under 1 MB,
+# committed deliberately with `git add -f` after review)
+*.mp4
+*.mov
+*.MOV
+*.m4v
+*.avi
+*.mkv
+*.wav
+*.mp3
+*.m4a
+*.flac
+renders/
+outputs/
+output/
+comfyui-output/
+
+# Private or sensitive data — never commit
+private/
+footage/
+raw-footage/
+customer-data/
+**/data/raw/
+**/data/private/
+
+# Local databases and vector stores
+*.sqlite
+*.sqlite3
+*.db
+chroma/
+lancedb/
+.supabase/
+
+# Logs and local run records (brand assistant writes runs/<date>.jsonl)
+runs/
+*.log
+logs/
