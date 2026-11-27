@@ -1,0 +1,15 @@
+{
+  "experiment_id": "EXP-NN",
+  "status": "design",
+  "pre_registered_on": null,
+  "run_date": null,
+  "n_items": null,
+  "repeats": null,
+  "models": [{"provider": "", "model_id": "", "date_used": ""}],
+  "conditions": {},
+  "metrics": {"metric_name": {"mean": null, "sd": null, "ci95": [null, null]}},
+  "total_cost_usd": null,
+  "hypothesis_supported": null,
+  "limitations": [],
+  "notes": ""
+}

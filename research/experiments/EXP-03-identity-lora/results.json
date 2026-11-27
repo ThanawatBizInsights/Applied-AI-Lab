@@ -1,0 +1,17 @@
+{
+  "experiment_id": "EXP-03",
+  "status": "design",
+  "run_date": null,
+  "n_items": null,
+  "models": [],
+  "conditions": {},
+  "metrics": {
+    "Identity similarity (DINOv2 or face-embedding cosine)": null,
+    "Rubric pass rate": null,
+    "Constraint violation rate": null,
+    "Prompt adherence": null,
+    "GPU seconds per image": null
+  },
+  "hypothesis_supported": null,
+  "notes": ""
+}

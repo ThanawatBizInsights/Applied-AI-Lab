@@ -1,0 +1,1 @@
+run_id,date,character,condition,lora_strength,prompt_id,seed,checkpoint_hash,similarity,rubric_pass,violations,human_rating_1_5,gpu_seconds,notes

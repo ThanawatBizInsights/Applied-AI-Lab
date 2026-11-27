@@ -1,0 +1,62 @@
+{
+  "id": "little_snowy_owl",
+  "name": "Little Snowy Owl Studio",
+  "language": "en",
+  "audience": "Parents of children aged about 3-7 (marketing is written for parents, never for children)",
+  "voice": "Gentle, calm and reassuring. Honest about what the app does. No pressure, no hype.",
+  "products": [
+    "Animal Pairs (iPad memory-matching game, offline, no ads, no accounts)",
+    "Phonics Pond (phonics app; release status needs confirmation)"
+  ],
+  "mascot": {
+    "name": "Snowy",
+    "description": "A snowy owl, the studio mascot (full reference sheet: needs confirmation)",
+    "must_have": [],
+    "must_not_have": []
+  },
+  "tasks": {
+    "app_description": "Write a short, parent-facing description of the app named in the user input, mentioning only features listed in the input.",
+    "promo_text": "Write App Store promotional text (max 170 characters) for the app in the user input."
+  },
+  "rules": [
+    {
+      "id": "no-urgency",
+      "type": "forbidden_terms",
+      "severity": "error",
+      "message": "No urgency or pressure tactics (dark patterns).",
+      "terms": ["hurry", "limited time", "buy now", "last chance", "don't miss", "act now"]
+    },
+    {
+      "id": "no-false-features",
+      "type": "forbidden_terms",
+      "severity": "error",
+      "message": "The apps have no AI chat, accounts or tracking. Do not claim them.",
+      "terms": ["AI tutor", "chat with", "sign up", "create an account", "track your child"]
+    },
+    {
+      "id": "no-fear",
+      "type": "forbidden_terms",
+      "severity": "error",
+      "message": "Do not use fear of falling behind to sell to parents.",
+      "terms": ["fall behind", "falling behind"]
+    },
+    {
+      "id": "privacy-promise",
+      "type": "required_any",
+      "severity": "warning",
+      "message": "Descriptions should mention that the app is offline, ad-free or account-free.",
+      "terms": ["offline", "no ads", "no accounts", "ad-free"],
+      "applies_to": ["app_description"]
+    },
+    {
+      "id": "promo-length",
+      "type": "max_chars",
+      "severity": "error",
+      "message": "Promotional text must be at most 170 characters (check the current App Store Connect limit).",
+      "value": 170,
+      "applies_to": ["promo_text"]
+    }
+  ],
+  "approval_required": true,
+  "_sources": "Learner brief and the AnimalPairs and LittleSnowyOwlStudio repository READMEs, verified 2026-11-27."
+}

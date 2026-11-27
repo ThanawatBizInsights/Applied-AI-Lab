@@ -1,0 +1,87 @@
+{
+  "id": "balena",
+  "name": "Balena Roastery",
+  "language": "th",
+  "audience": "Thai coffee lovers who buy cold brew concentrate through LINE OA and social media",
+  "voice": "Warm, friendly and playful Thai. Short sentences. Practical brewing tips. No exaggerated claims.",
+  "products": [
+    "Balena Cold Brew Concentrate Original 500 mL"
+  ],
+  "mascot": {
+    "name": "Balena",
+    "description": "A short, round whale mascot",
+    "must_have": ["coffee cup", "water splash", "white striped belly", "pink cheeks"],
+    "must_not_have": ["legs", "feet"]
+  },
+  "tasks": {
+    "caption": "Write one Thai social media caption (max 400 characters) for the product or topic in the user input. End with an invitation to order or ask via LINE.",
+    "image_prompt": "Write one English text-to-image prompt for a scene with the Balena mascot described in the user input. Describe the mascot's required features explicitly."
+  },
+  "rules": [
+    {
+      "id": "no-legs",
+      "type": "forbidden_terms",
+      "severity": "error",
+      "message": "Balena must never have legs or feet.",
+      "terms": ["legs", "leg", "feet", "foot", "ขา", "เท้า"],
+      "ignore_within": ["ขาว", "ขาย", "ขาด"]
+    },
+    {
+      "id": "no-health-claims",
+      "type": "forbidden_terms",
+      "severity": "error",
+      "message": "No health or medical claims about coffee.",
+      "terms": ["ลดน้ำหนัก", "รักษาโรค", "weight loss", "cure"]
+    },
+    {
+      "id": "line-cta",
+      "type": "required_any",
+      "severity": "warning",
+      "message": "Captions should invite the reader to order or ask via LINE.",
+      "terms": ["LINE", "ไลน์"],
+      "applies_to": ["caption"]
+    },
+    {
+      "id": "caption-length",
+      "type": "max_chars",
+      "severity": "warning",
+      "message": "Captions should be at most 400 characters.",
+      "value": 400,
+      "applies_to": ["caption"]
+    },
+    {
+      "id": "mascot-cup",
+      "type": "required_any",
+      "severity": "error",
+      "message": "Image prompts must include Balena's coffee cup.",
+      "terms": ["coffee cup", "cup of coffee", "แก้วกาแฟ"],
+      "applies_to": ["image_prompt"]
+    },
+    {
+      "id": "mascot-splash",
+      "type": "required_any",
+      "severity": "error",
+      "message": "Image prompts must include Balena's water splash.",
+      "terms": ["water splash", "splash", "น้ำกระเซ็น"],
+      "applies_to": ["image_prompt"]
+    },
+    {
+      "id": "mascot-belly",
+      "type": "required_any",
+      "severity": "error",
+      "message": "Image prompts must include Balena's white striped belly.",
+      "terms": ["striped belly", "white belly", "ท้องลาย"],
+      "applies_to": ["image_prompt"]
+    },
+    {
+      "id": "mascot-cheeks",
+      "type": "required_any",
+      "severity": "error",
+      "message": "Image prompts must include Balena's pink cheeks.",
+      "terms": ["pink cheeks", "แก้มชมพู"],
+      "applies_to": ["image_prompt"]
+    }
+  ],
+  "approval_required": true,
+  "_sources": "Learner brief (mascot rules) and the Balena repository README (product name), verified 2026-11-27."
+}

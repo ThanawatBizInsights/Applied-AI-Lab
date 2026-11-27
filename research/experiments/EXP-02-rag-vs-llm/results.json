@@ -1,0 +1,17 @@
+{
+  "experiment_id": "EXP-02",
+  "status": "design",
+  "run_date": null,
+  "n_items": null,
+  "models": [],
+  "conditions": {},
+  "metrics": {
+    "Correctness (human-graded)": null,
+    "Unsupported-claim count": null,
+    "Citation precision": null,
+    "Refusal accuracy on unanswerable questions": null,
+    "Cost and latency": null
+  },
+  "hypothesis_supported": null,
+  "notes": ""
+}
