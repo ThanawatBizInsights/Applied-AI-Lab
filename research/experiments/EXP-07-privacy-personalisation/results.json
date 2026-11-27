@@ -1,0 +1,16 @@
+{
+  "experiment_id": "EXP-07",
+  "status": "design",
+  "run_date": null,
+  "n_items": null,
+  "models": [],
+  "conditions": {},
+  "metrics": {
+    "Message appropriateness rating": null,
+    "Personalisation relevance rating": null,
+    "Data fields sent": null,
+    "Guardrail violations": null
+  },
+  "hypothesis_supported": null,
+  "notes": ""
+}

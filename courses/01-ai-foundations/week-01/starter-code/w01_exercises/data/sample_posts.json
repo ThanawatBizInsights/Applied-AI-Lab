@@ -1,0 +1,33 @@
+[
+  {
+    "id": "post-001",
+    "brand": "balena",
+    "channel": "line_oa",
+    "text": "Cold Brew Original 500 mL ชงง่าย แค่ผสมน้ำหรือนม 1:1 สั่งทาง LINE ได้เลย",
+    "hashtags": ["#BalenaColdBrew", "#กาแฟสกัดเย็น"],
+    "scheduled": "2026-12-01T09:00:00+07:00"
+  },
+  {
+    "id": "post-002",
+    "brand": "checkkhum",
+    "channel": "facebook",
+    "text": "เช็กเบี้ยประกันชั้น 1 ก่อนต่ออายุ เงื่อนไขความคุ้มครองเป็นไปตามกรมธรรม์",
+    "hashtags": ["#เช็กคุ้ม"],
+    "scheduled": "2026-12-02T12:00:00+07:00"
+  },
+  {
+    "id": "post-003",
+    "brand": "little_snowy_owl",
+    "channel": "instagram",
+    "text": "Animal Pairs: a gentle memory game for little ones. Offline, no ads.",
+    "hashtags": "#AnimalPairs",
+    "scheduled": "2026-12-03T18:00:00+07:00"
+  },
+  {
+    "id": "post-004",
+    "brand": "balena",
+    "channel": "tiktok",
+    "hashtags": [],
+    "scheduled": "not-a-date"
+  }
+]

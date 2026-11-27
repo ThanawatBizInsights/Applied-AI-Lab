@@ -1,0 +1,16 @@
+{
+  "experiment_id": "EXP-08",
+  "status": "design",
+  "run_date": null,
+  "n_items": null,
+  "models": [],
+  "conditions": {},
+  "metrics": {
+    "Weekly time saved": null,
+    "Usage frequency over time": null,
+    "Error/rework rate": null,
+    "Qualitative reasons for use or abandonment": null
+  },
+  "hypothesis_supported": null,
+  "notes": ""
+}

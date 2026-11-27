@@ -1,0 +1,59 @@
+{
+  "id": "checkkhum",
+  "name": "CheckKhum (เช็กคุ้ม) Car & Travel Insurance",
+  "language": "th",
+  "audience": "Thai drivers and travellers comparing car, EV, compulsory (พ.ร.บ.) and travel insurance",
+  "voice": "Trustworthy, clear and polite Thai. Explain insurance terms simply. Never pressure the customer.",
+  "products": [
+    "Car insurance (class 1, 2+, 3+)",
+    "EV insurance",
+    "Compulsory motor insurance (พ.ร.บ.)",
+    "Travel insurance"
+  ],
+  "mascot": null,
+  "tasks": {
+    "customer_reply": "Draft a polite Thai reply to the customer enquiry in the user input. A licensed staff member will review it before sending. Do not state prices or coverage details that are not in the input.",
+    "quote_summary": "Summarise the synthetic quotation details in the user input in plain Thai for staff review."
+  },
+  "rules": [
+    {
+      "id": "no-guarantees",
+      "type": "forbidden_terms",
+      "severity": "error",
+      "message": "Never guarantee the lowest price or claim approval.",
+      "terms": ["ถูกที่สุด", "อนุมัติแน่นอน", "เคลมได้แน่นอน", "guaranteed lowest", "guaranteed approval"]
+    },
+    {
+      "id": "conditions-disclaimer",
+      "type": "required_any",
+      "severity": "error",
+      "message": "Replies must say that coverage follows the policy terms and conditions.",
+      "terms": ["เงื่อนไขเป็นไปตามกรมธรรม์", "เงื่อนไขความคุ้มครองเป็นไปตามกรมธรรม์", "terms and conditions apply"],
+      "applies_to": ["customer_reply", "quote_summary"]
+    },
+    {
+      "id": "no-sensitive-requests",
+      "type": "forbidden_terms",
+      "severity": "error",
+      "message": "Never ask for ID card numbers, passwords, OTPs or card numbers in chat.",
+      "terms": ["เลขบัตรประชาชน", "เลขบัตรประจำตัวประชาชน", "รหัสผ่าน", "เลขบัตรเครดิต", "OTP", "password"]
+    },
+    {
+      "id": "no-pii-in-output",
+      "type": "forbidden_regex",
+      "severity": "error",
+      "message": "Output must not contain a Thai national ID number or a phone number.",
+      "patterns": ["\\b\\d{13}\\b", "\\b\\d-\\d{4}-\\d{5}-\\d{2}-\\d\\b", "\\b0\\d{1,2}-?\\d{3}-?\\d{4}\\b"]
+    },
+    {
+      "id": "reply-length",
+      "type": "max_chars",
+      "severity": "warning",
+      "message": "Customer replies should be at most 600 characters.",
+      "value": 600,
+      "applies_to": ["customer_reply"]
+    }
+  ],
+  "approval_required": true,
+  "_sources": "Learner brief (compliance constraints) and the checkkhum repository README (products), verified 2026-11-27. All exercise data must be synthetic."
+}

@@ -1,0 +1,17 @@
+{
+  "experiment_id": "EXP-04",
+  "status": "design",
+  "run_date": null,
+  "n_items": null,
+  "models": [],
+  "conditions": {},
+  "metrics": {
+    "Total minutes (creation + review + fixes)": null,
+    "Direct cost (API, GPU, credits)": null,
+    "Quality rating (blind, 1–5)": null,
+    "Brand-check pass rate": null,
+    "Revisions needed": null
+  },
+  "hypothesis_supported": null,
+  "notes": ""
+}
